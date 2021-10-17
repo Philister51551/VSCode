@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window窗口对象</title>
+    <script>
+
+        function fun() {
+            alert("wake up!");
+        }
+    
+        let d1 = window.setTimeout("fun()", 3000);
+    
+        window.clearTimeout(d1);
+    
+        let d2 = window.setInterval("fun()", 3000);
+    
+        window.clearInterval(d2);
+    
+        window.onload = function() {
+            let div = document.getElementById("div");
+            alert(div);
+        }
+    </script>
+</head>
+<body>
+    <div id="div">abcd</div>
+</body>
+<!-- <script>
+
+    function fun() {
+        alert("wake up!");
+    }
+
+    let d1 = window.setTimeout("fun()", 3000);
+
+    window.clearTimeout(d1);
+
+    let d2 = window.setInterval("fun()", 3000);
+
+    window.clearInterval(d2);
+
+    let div = document.getElementById("div");
+    alert(div);
+</script> -->
+</html>

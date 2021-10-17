@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+</body>
+<script>
+
+    let map = new Map();
+    map.set("张三", 23);
+    map.set("李四", 24);
+    map.set("李四", 25);
+
+    document.write(map.size + "<br>");
+    document.write(map.get("李四") + "<br>");
+
+    let et = map.entries();
+    for (let i = 0; i < map.size; i++) {
+        document.write(et.next().value + "<br>");
+    }
+    // map.forEach(function(element) {
+    //     document.write(element + "<br>")
+    // })
+
+    document.write(map.delete("李四") + "<br>");
+    let et1 = map.entries();
+    for (let i = 0; i < map.size; i++) {
+        document.write(et1.next().value + "<br>");
+    }
+</script>
+</html>

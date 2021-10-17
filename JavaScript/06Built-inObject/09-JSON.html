@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+</body>
+<script>
+
+    let weather = {
+        city : "北京",
+        date : "2088-08-08",
+        temperature : "10~23",
+        humidity : "22%"
+    };
+
+    let str = JSON.stringify(weather);
+    document.write(str + "<br>");
+
+    let re = JSON.parse(str);
+    document.write("城市:" + re.city + "<br>");
+    document.write("日期:" + re.date + "<br>");
+    document.write("温度:" + re.temperature + "<br>");
+    document.write("湿度:" + re.humidity + "<br>");
+</script>
+</html>

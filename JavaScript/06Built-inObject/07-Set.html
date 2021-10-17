@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    let s = new Set();
+    s.add("a");
+    s.add("b");
+    s.add("c");
+    s.add("c");
+
+    document.write(s.size + "<br>");
+
+    let st = s.keys();
+    // for (let i = 0; i < s.size; i++) {
+    //     document.write(st.next().value + "<br>");
+    // }
+    s.forEach(function(element) {
+        document.write(element + "<br>");
+    })
+    document.write("===============<br>");
+
+    document.write(s.delete("c") + "<br>");
+    s.forEach(function(element) {
+        document.write(element + "<br>");
+    })
+
+
+</script>
+</html>

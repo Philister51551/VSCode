@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+</body>
+<script>
+
+    let s1 = new String("hello");
+    document.write(s1 + "<br>");
+
+    let s2 = "hello";
+    document.write(s2 + "<br>");
+
+    document.write(s2.length + "<br>");
+
+    document.write(s2.charAt(1) + "<br>");
+
+    document.write(s2.indexOf("l") + "<br>");
+
+    document.write(s2.substring(2,4) + "<br>");
+
+    let s3 = "张三,23,男";
+
+    let arr = s3.split(",");
+
+    arr.forEach(function(element) {
+        document.write(element + "<br>");
+    })
+
+    let s4 = "你会不会跳伞啊？让我落地成盒。你妹的。";
+    let s5 = s4.replace("你妹的","***");
+    document.write(s5 + "<br>");
+  
+</script>
+</html>

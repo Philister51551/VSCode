@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>注释</title>
+    <title>RegExp</title>
 </head>
 <body>
 </body>
 <script>
-    //单行注释
-    /*
-        注释的内容
-        注释的内容
-    */
 
-   alert("hello js");
+    let reg1 = /^[1][358][0-9]{9}$/;
+    document.write(reg1.test("18688888888") + "<br>");
+
+    let reg2 = /^[a-zA-Z_0-9]{4,16}$/;
+    document.write(reg2.test("zhangsan") + "<br>");
 </script>
 </html>
