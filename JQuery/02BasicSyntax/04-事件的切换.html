@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">我是div</div>
+</body>
+<script src="../01QuickStart/js/jquery-3.6.0.min.js"></script>
+<script>
+
+    // $("#div").mouseover(function() {
+    //     //$("#div").css("background", "red");
+    //     $(this).css("background", "red");
+    // });
+
+    // $("#div").mouseout(function() {
+    //     //$("#div").css("background", "blue");
+    //     $(this).css("background", "blue");
+    // });
+
+    $("#div").mouseover(function() {
+        $(this).css("background", "red");
+    }).mouseout(function() {
+        $(this).css("background", "blue");
+    });
+</script>
+</html>
