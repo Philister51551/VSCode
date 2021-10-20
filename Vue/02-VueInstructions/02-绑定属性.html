@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绑定属性</title>
+    <style>
+        .my{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+        <a v-bind:href="url">baidu</a>
+        <br>
+        <a :href="url">baidu</a>
+        <br>
+        <div :class="cls">我是div</div>
+    </div>
+</body>
+<script src="..\01QuickStart\js\vue.js"></script>
+<script>
+    new Vue({
+        el:"#div",
+        data:{
+            url:"https://www.baidu.com",
+            cls:"my"
+        }
+    });
+</script>
+</html>
