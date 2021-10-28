@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义组件</title>
+    <script src="..\01QuickStart\js\vue.js"></script>
+</head>
+<body>
+    <div id="div">
+        <my-button>我的按钮</my-button>
+    </div>
+</body>
+<script>
+    Vue.component("my-button",{
+        //属性
+        props:["style"],
+        //数据函数
+        data: () => {
+            return{
+                msg:"button"
+            }
+        },
+        //解析标签模板
+        template:"<button style='color:red'>{{msg}}</button>"
+
+    });
+    new Vue({
+        el:"#div"
+    });
+</script>
+</html>
