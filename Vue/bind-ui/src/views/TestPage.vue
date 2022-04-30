@@ -4,9 +4,12 @@
     </div> -->
   <div class="common-layout">
     <el-container>
-      <el-header>图表展示</el-header>
+      <el-header><h3>健康手环数据可视化</h3></el-header>
       <el-container>
-        <el-aside width="200px">Aside</el-aside>
+        <el-aside width="200px">
+          <!-- Aside -->
+          <SideBar/>
+        </el-aside>
         <el-main>
           <el-card>
             <el-container>
@@ -38,6 +41,7 @@
 <script>
 import * as echarts from "echarts";
 import $ from "jquery";
+import SideBar from "@/components/SideBar";
 
 export default {
   data() {
@@ -49,6 +53,9 @@ export default {
     //this.drawLine();
     this.drawDemo();
     this.drawAge();
+  },
+  components: {
+    SideBar
   },
   methods: {
     // drawLine() {
@@ -187,7 +194,7 @@ export default {
   background-color: #b3c0d1;
   color: #333;
   text-align: center;
-  line-height: 60px;
+  line-height: 20px;
 }
 
 .el-aside {
