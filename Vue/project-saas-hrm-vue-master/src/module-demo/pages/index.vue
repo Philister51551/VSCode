@@ -57,7 +57,8 @@ export default {
   // 创建完毕状态
   created() {
     this.getList()
-  },
+    console.log('created方法执行')
+  }
 }
 </script>
 
