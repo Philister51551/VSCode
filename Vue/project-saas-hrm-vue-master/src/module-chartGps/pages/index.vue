@@ -3,35 +3,6 @@
     <div class="app-container">
       <el-card shadow="never">
         chartGps
-        <!-- 数据 -->
-        <!-- <el-table :data="dataList"  fit highlight-current-row style="width: 100%" border>
-          <el-table-column align="center" :label="$t('table.operationType')">
-            <template slot-scope="scope">
-              <span>{{scope.row.type}}</span>
-            </template>
-          </el-table-column>
-          <el-table-column align="center" :label="$t('table.operator')">
-            <template slot-scope="scope">
-              <span>{{scope.row.author}}</span>
-            </template>
-          </el-table-column>
-          <el-table-column :label="$t('table.results')">
-            <template slot-scope="scope">
-              <span>{{scope.row.title}}</span>
-            </template>
-          </el-table-column>
-          <el-table-column align="center" :label="$t('table.operationDate')">
-            <template slot-scope="scope">
-              <span>{{scope.row.display_time}}</span>
-            </template>
-          </el-table-column>
-          <el-table-column align="center" :label="$t('table.describe')">
-            <template slot-scope="scope">
-              <span>{{scope.row.forecast}}</span>
-            </template>
-          </el-table-column>
-        </el-table> -->
-        <!-- end -->
       </el-card>
      </div>
   </div>
@@ -72,3 +43,33 @@ export default {
   text-align: right;
 }
 </style>
+
+<!-- 数据 -->
+        <!-- <el-table :data="dataList"  fit highlight-current-row style="width: 100%" border>
+          <el-table-column align="center" :label="$t('table.operationType')">
+            <template slot-scope="scope">
+              <span>{{scope.row.type}}</span>
+            </template>
+          </el-table-column>
+          <el-table-column align="center" :label="$t('table.operator')">
+            <template slot-scope="scope">
+              <span>{{scope.row.author}}</span>
+            </template>
+          </el-table-column>
+          <el-table-column :label="$t('table.results')">
+            <template slot-scope="scope">
+              <span>{{scope.row.title}}</span>
+            </template>
+          </el-table-column>
+          <el-table-column align="center" :label="$t('table.operationDate')">
+            <template slot-scope="scope">
+              <span>{{scope.row.display_time}}</span>
+            </template>
+          </el-table-column>
+          <el-table-column align="center" :label="$t('table.describe')">
+            <template slot-scope="scope">
+              <span>{{scope.row.forecast}}</span>
+            </template>
+          </el-table-column>
+        </el-table> -->
+        <!-- end -->
