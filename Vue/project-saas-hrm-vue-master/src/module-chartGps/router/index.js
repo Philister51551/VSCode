@@ -12,10 +12,10 @@ const _import = require('@/router/import_' + process.env.NODE_ENV)
 export default [
   {
     root: true,
-    path: '/saas-demo',
+    path: '/chartGps',
     component: Layout,
     redirect: 'noredirect',
-    name: 'saas-demo',
+    name: 'chartGps',
     meta: {
       title: 'xxx业务模块管理',
       icon: 'component'
@@ -23,9 +23,9 @@ export default [
     children: [
       {
         path: 'index',
-        component: _import('demo/pages/index'),
+        component: _import('chartGps/pages/index'),
         name: 'saas-clients-index',
-        meta: {title: 'demo', icon: 'component', noCache: true}
+        meta: {title: 'chartGps', icon: 'component', noCache: true}
       }
     ]
   }
