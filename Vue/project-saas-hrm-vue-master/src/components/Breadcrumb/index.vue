@@ -1,6 +1,9 @@
 <template>
 <div class="app-breadcrumb">
-  江苏传智播客教育科技股份有限公司<span class="breadBtn">体验版</span>
+  天师医疗科技股份有限公司
+  <span class="breadBtn">
+    正式版 V3.0
+    </span>
 </div>
 </template>
 
