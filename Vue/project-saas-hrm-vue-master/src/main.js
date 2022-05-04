@@ -19,14 +19,18 @@ import './mock' // simulation data
 import dashboard from '@/module-dashboard/' // 面板
 import demo from '@/module-demo/' // 面板
 import chartGps from '@/module-chartGps/' // Gps面板
+import chartMap from '@/module-chartMap/' // Map面板
+import chartTemp from '@/module-chartTemp/' // Temp面板
 
 import tools from './utils/common.js'
 Vue.prototype.$tools = tools
 
 Vue.use(tools)
 Vue.use(dashboard, store)
-Vue.use(demo, store)
+//Vue.use(demo, store)
 Vue.use(chartGps, store)
+Vue.use(chartMap, store)
+Vue.use(chartTemp, store)
 
 
 /*
