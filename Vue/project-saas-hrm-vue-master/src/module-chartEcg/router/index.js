@@ -12,10 +12,10 @@ const _import = require('@/router/import_' + process.env.NODE_ENV)
 export default [
   {
     root: true,
-    path: '/chartTemp',
+    path: '/chartEcg',
     component: Layout,
     redirect: 'noredirect',
-    name: 'chartTemp',
+    name: 'chartEcg',
     meta: {
       title: 'xxx业务模块管理',
       icon: 'component'
@@ -23,9 +23,9 @@ export default [
     children: [
       {
         path: 'index',
-        component: _import('chartTemp/pages/index'),
+        component: _import('chartEcg/pages/index'),
         name: 'saas-clients-index',
-        meta: {title: '体温监测', icon: 'user', noCache: true}
+        meta: {title: '心率监测', icon: 'statistics', noCache: true}
       }
     ]
   }

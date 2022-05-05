@@ -25,7 +25,7 @@ export default [
         path: 'index',
         component: _import('chartMap/pages/index'),
         name: 'saas-clients-index',
-        meta: {title: '范围追踪', icon: 'component', noCache: true}
+        meta: {title: '范围追踪', icon: 'example', noCache: true}
       }
     ]
   }

@@ -25,7 +25,7 @@ export default [
         path: 'index',
         component: _import('chartGps/pages/index'),
         name: 'saas-clients-index',
-        meta: {title: '位置分布', icon: 'component', noCache: true}
+        meta: {title: '位置分布', icon: 'chart', noCache: true}
       }
     ]
   }

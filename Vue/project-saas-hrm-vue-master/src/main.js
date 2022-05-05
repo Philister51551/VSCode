@@ -21,6 +21,7 @@ import demo from '@/module-demo/' // 面板
 import chartGps from '@/module-chartGps/' // Gps面板
 import chartMap from '@/module-chartMap/' // Map面板
 import chartTemp from '@/module-chartTemp/' // Temp面板
+import chartEcg from '@/module-chartEcg/' // Ecg面板
 
 import tools from './utils/common.js'
 Vue.prototype.$tools = tools
@@ -31,6 +32,7 @@ Vue.use(dashboard, store)
 Vue.use(chartGps, store)
 Vue.use(chartMap, store)
 Vue.use(chartTemp, store)
+Vue.use(chartEcg, store)
 
 
 /*
