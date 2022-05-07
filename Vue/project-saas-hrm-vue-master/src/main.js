@@ -28,11 +28,11 @@ Vue.prototype.$tools = tools
 
 Vue.use(tools)
 Vue.use(dashboard, store)
-//Vue.use(demo, store)
 Vue.use(chartGps, store)
 Vue.use(chartMap, store)
 Vue.use(chartTemp, store)
 Vue.use(chartEcg, store)
+Vue.use(demo, store)
 
 
 /*

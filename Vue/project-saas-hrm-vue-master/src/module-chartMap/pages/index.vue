@@ -2,7 +2,7 @@
   <div class="dashboard-container">
     <div class="app-container">
       <el-card shadow="never">
-        <h3>10016号人员所在位置</h3>
+        <h3>63号隔离点10016号人员所在位置</h3>
         <img :src="demoImg">
       </el-card>
     </div>

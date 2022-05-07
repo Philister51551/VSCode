@@ -2,64 +2,61 @@
   <div class="dashboard-container">
     <div class="app-container">
       <el-card shadow="never">
-        <!-- 数据 -->
-        <el-table :data="dataList"  fit highlight-current-row style="width: 100%" border>
-          <el-table-column align="center" :label="$t('table.operationType')">
-            <template slot-scope="scope">
-              <span>{{scope.row.type}}</span>
-            </template>
-          </el-table-column>
-          <el-table-column align="center" :label="$t('table.operator')">
-            <template slot-scope="scope">
-              <span>{{scope.row.author}}</span>
-            </template>
-          </el-table-column>
-          <el-table-column :label="$t('table.results')">
-            <template slot-scope="scope">
-              <span>{{scope.row.title}}</span>
-            </template>
-          </el-table-column>
-          <el-table-column align="center" :label="$t('table.operationDate')">
-            <template slot-scope="scope">
-              <span>{{scope.row.display_time}}</span>
-            </template>
-          </el-table-column>
-          <el-table-column align="center" :label="$t('table.describe')">
-            <template slot-scope="scope">
-              <span>{{scope.row.forecast}}</span>
-            </template>
-          </el-table-column>
-        </el-table>
-        <!-- end -->
+        {{tname}}
       </el-card>
-     </div>
+    </div>
   </div>
 </template>
 
 <script>
-import {list} from '@/api/example/table'
+
+const axiosDemo = axios.create({
+  baseURL: '/api/api/orgs',
+  timeout: 5000,
+  headers: {
+    'token' : '32b0d1e410134134a69b98692b99c157',
+    'Content-Type': 'application/json; charset=utf-8'
+    //'Access-Control-Allow-Origin' : '*'
+  }
+}
+)
+
+import { list } from "@/api/example/table";
+import axios from "axios";
 export default {
-  name: 'saas-clients-table-index',
+  name: "saas-clients-table-index",
   data() {
     return {
-      dataList: []
-    }
+      dataList: [],
+      tname: '666' 
+    };
   },
   methods: {
     // 获取列表数据
     getList() {
-      list().then(res => {
-          this.dataList = res.data.items
-          console.log(this.dataList)
+      list().then((res) => {
+        this.dataList = res.data.items;
+        //console.log(this.dataList);
+      });
+    },
+    getData() {
+      axiosDemo({
+        method: 'get'
+      }).then((res) => {
+        this.tname=res.data.data[0].name;
+        console.log(res.data.data[0].name);
+      }).catch((err) => {
+        console.log(err);
       })
     }
   },
   // 创建完毕状态
   created() {
-    this.getList()
-    console.log('created方法执行')
-  }
-}
+    //this.getList();
+    console.log("created方法执行");
+    this.getData();
+  },
+};
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
