@@ -15,11 +15,22 @@ const axiosDemo = axios.create({
   timeout: 5000,
   headers: {
     'token' : '32b0d1e410134134a69b98692b99c157',
+    //'token' : '57b46f2498e64231bbcc8379b7b90026',
     'Content-Type': 'application/json; charset=utf-8'
     //'Access-Control-Allow-Origin' : '*'
   }
-}
-)
+})
+
+const axiosDemo1 = axios.create({
+  baseURL: '/api/api/orgs/6899/grouplist',
+  timeout: 5000,
+  headers: {
+    'token' : '32b0d1e410134134a69b98692b99c157',
+    //'token' : '57b46f2498e64231bbcc8379b7b90026',
+    'Content-Type': 'application/json; charset=utf-8'
+    //'Access-Control-Allow-Origin' : '*'
+  }
+})
 
 import { list } from "@/api/example/table";
 import axios from "axios";
@@ -40,11 +51,11 @@ export default {
       });
     },
     getData() {
-      axiosDemo({
+      axiosDemo1({
         method: 'get'
       }).then((res) => {
-        this.tname=res.data.data[0].name;
-        console.log(res.data.data[0].name);
+        this.tname=res.data.data[0];
+        console.log(res.data.data[0]);
       }).catch((err) => {
         console.log(err);
       })
