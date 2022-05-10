@@ -73,7 +73,7 @@ export default {
       });
     },
     getData() {
-      axiosDemo3({
+      axiosDemo2({
         method: 'get'
       }).then((res) => {
         //this.tname = res.data.data[0];
